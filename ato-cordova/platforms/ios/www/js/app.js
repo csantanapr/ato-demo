@@ -7,10 +7,46 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, $http, $rootScope) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
+    console.log('This is when all Cordova Plugins are ready');
+    // Lets load the Configuration from the bluelist.json file
+    $http.get("./bluelist.json").success(function(config) {
+
+      // Initialise the SDK
+      IBMBluemix.initialize(config).done(function() {
+
+        // Let the user no they have logged in and can do some stuff if they require
+        console.log("Sucessful initialization with IBMBluemix Version : " + IBMBluemix.getVersion());
+
+        // Initialize the Service
+
+        IBMData.initializeService().then(function(data) {
+
+          console.log("IBM Data Initialized");
+            $rootScope.dataService = data;
+            if($rootScope.onRefresh){
+              $rootScope.onRefresh();
+            }
+
+          }).
+          catch (function(err) {
+              console.error("IBM Data initialization failed", err);
+          });
+
+        // Let the user no they have logged in and can do some stuff if they require
+        //console.log("Sucessful initialization Data Services ");
+
+      }, function(response) {
+        // Error
+        console.log("Error:", response);
+
+      });
+
+    });
+
     if(window.cordova && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
     }
@@ -75,10 +111,29 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
           controller: 'AccountCtrl'
         }
       }
+    })
+
+    .state('tab.list-index', {
+        url: '/list',
+        views: {
+            'list-tab': {
+                templateUrl: 'templates/list-index.html',
+                controller: 'ListIndexCtrl'
+            }
+        }
+    })
+
+    .state('tab.about', {
+        url: '/about',
+        views: {
+            'about-tab': {
+                templateUrl: 'templates/about.html',
+                controller: 'AboutCtrl'
+            }
+        }
     });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/tab/list');
 
 });
-

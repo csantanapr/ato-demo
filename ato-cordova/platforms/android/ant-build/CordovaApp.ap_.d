@@ -1,10 +1,6 @@
 /Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/ant-build/CordovaApp.ap_ \
  : /Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/res/drawable/icon.png \
 /Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/res/drawable-hdpi/icon.png \
-/Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/res/drawable-land-hdpi/screen.png \
-/Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/res/drawable-land-ldpi/screen.png \
-/Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/res/drawable-land-mdpi/screen.png \
-/Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/res/drawable-land-xhdpi/screen.png \
 /Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/res/drawable-ldpi/icon.png \
 /Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/res/drawable-mdpi/icon.png \
 /Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/res/drawable-port-hdpi/screen.png \
@@ -12,14 +8,12 @@
 /Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/res/drawable-port-mdpi/screen.png \
 /Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/res/drawable-port-xhdpi/screen.png \
 /Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/res/drawable-xhdpi/icon.png \
+/Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/res/drawable-xxhdpi/icon.png \
+/Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/res/drawable-xxxhdpi/icon.png \
 /Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/res/values/strings.xml \
 /Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/res/xml/config.xml \
 /Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/ant-build/res/drawable/icon.png \
 /Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/ant-build/res/drawable-hdpi/icon.png \
-/Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/ant-build/res/drawable-land-hdpi/screen.png \
-/Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/ant-build/res/drawable-land-ldpi/screen.png \
-/Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/ant-build/res/drawable-land-mdpi/screen.png \
-/Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/ant-build/res/drawable-land-xhdpi/screen.png \
 /Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/ant-build/res/drawable-ldpi/icon.png \
 /Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/ant-build/res/drawable-mdpi/icon.png \
 /Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/ant-build/res/drawable-port-hdpi/screen.png \
@@ -27,8 +21,11 @@
 /Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/ant-build/res/drawable-port-mdpi/screen.png \
 /Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/ant-build/res/drawable-port-xhdpi/screen.png \
 /Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/ant-build/res/drawable-xhdpi/icon.png \
+/Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/ant-build/res/drawable-xxhdpi/icon.png \
+/Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/ant-build/res/drawable-xxxhdpi/icon.png \
 /Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/assets/_where-is-www.txt \
 /Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/assets/www \
+/Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/assets/www/bluelist.json \
 /Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/assets/www/cordova.js \
 /Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/assets/www/cordova_plugins.js \
 /Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/assets/www/css \
@@ -39,6 +36,8 @@
 /Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/assets/www/plugins \
 /Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/assets/www/templates \
 /Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/assets/www/css/style.css \
+/Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/assets/www/img/bluelist_icon.png \
+/Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/assets/www/img/bluemix_logo.png \
 /Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/assets/www/img/ionic.png \
 /Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/assets/www/js/app.js \
 /Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/assets/www/js/controllers.js \
@@ -123,7 +122,10 @@
 /Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/assets/www/plugins/com.ionic.keyboard/www/keyboard.js \
 /Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/assets/www/plugins/org.apache.cordova.device/www \
 /Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/assets/www/plugins/org.apache.cordova.device/www/device.js \
+/Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/assets/www/templates/about.html \
 /Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/assets/www/templates/friend-detail.html \
+/Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/assets/www/templates/list-add.html \
+/Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/assets/www/templates/list-index.html \
 /Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/assets/www/templates/tab-account.html \
 /Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/assets/www/templates/tab-dash.html \
 /Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/assets/www/templates/tab-friends.html \
