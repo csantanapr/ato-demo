@@ -131,6 +131,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
                 controller: 'AboutCtrl'
             }
         }
+    })
+
+    .state('tab.twitter', {
+        url: '/twitter',
+        views: {
+            'list-twitter': {
+                templateUrl: 'templates/list-twitter.html',
+                controller: 'ListTwitterCtrl'
+            }
+        }
     });
 
   // if none of the above states are matched, use this as the fallback

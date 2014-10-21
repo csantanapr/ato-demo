@@ -174,6 +174,75 @@ angular.module('starter.controllers', [])
     };
 
 })
+.controller('ListTwitterCtrl', function($rootScope, $scope, $location, $ionicLoading, $ionicModal, ListService) {
+
+    // Form Model
+    $scope.item = {};
+
+    // Default Error message
+    $scope.error = "Could not retrieve the list items from the cloud";
+
+    $scope.loadItems = function() {
+
+        // Clear the List before adding new items
+        // This needs to be improved
+        $scope.list = [];
+
+        // Refresh
+        if (!$scope.$$phase) {
+            $scope.$apply();
+        }
+
+        // Because we are retrieving all the items every time we do something
+        // We need to clear the list before loading in some new values
+        $ionicLoading.show({
+            template: 'Loading...'
+        });
+
+        // "List is " is a service returning data from the
+        ListService.allCloud("Twitter").then(function(list) {
+
+            // Update the model with a list of Items
+            $scope.list = list;
+
+            // Let Angular know we have some data because of the Async nature of IBMBaaS
+            // This is required to make sure the information is uptodate
+            if (!$scope.$$phase) {
+                $scope.$apply();
+            }
+
+            $ionicLoading.hide();
+
+            // Trigger refresh complete on the pull to refresh action
+            $scope.$broadcast('scroll.refreshComplete');
+
+        }, function(err) {
+            console.log(err);
+
+            $scope.list = null;
+            $ionicLoading.hide();
+
+        });
+
+    };
+
+
+
+    $scope.select = function(item) {
+        // Shows/hides the delete button on hover
+
+        $location.path("#/tab/list");
+    };
+
+    $scope.onRefresh = function() {
+        // Go back to the Cloud and load a new set of Objects as a hard refresh has been done
+        $scope.loadItems();
+    };
+    $scope.loadItems();
+
+
+
+})
 // A simple controller that shows a tapped item's data
 .controller('AboutCtrl', function($rootScope, $scope) {
 

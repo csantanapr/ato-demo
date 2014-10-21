@@ -39,27 +39,31 @@ angular.module('starter.services', [])
     return {
 
         // Return all the Objects for a Given Class
-        allCloud: function() {
+        allCloud: function(documentType) {
 
             // get the Data Service
+            var objectType = documentType ?  documentType : "TODO";
+
+            var cacheType = documentType ? documentType : "items";
+
             var data = $rootScope.dataService;
 
             // Create a Defer as this is an async operation
             defer = $q.defer();
 
             // Clear the Cache with a new set
-            cache.remove('items');
+            cache.remove(cacheType);
 
             // Retreive a Query instance of type "Item" and issue a find() action on it
             // to retreive all the items (NO PAGING)
-            var query = data.Query.ofType("TODO");
+            var query = data.Query.ofType(objectType);
             query.find().done(function(list) {
 
                 // Place the Items in the Cache
-                cache.put('items', list);
+                cache.put(cacheType, list);
 
                 // return the Cache
-                defer.resolve(cache.get('items'));
+                defer.resolve(cache.get(cacheType));
 
             },function(err){
                 console.log(err);
@@ -72,10 +76,12 @@ angular.module('starter.services', [])
         },
 
         // Return the Cached List
-        allCache: function() {
+        allCache: function(documentType) {
 
             // Return the Cached Items
-            return cache.get('items');
+            var objectType = documentType ?  documentType : "items";
+
+            return cache.get(objectType);
 
         },
 
