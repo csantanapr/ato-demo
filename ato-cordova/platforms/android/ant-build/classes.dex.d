@@ -1,0 +1,19 @@
+/Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/ant-build/classes.dex : \
+/Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/ant-build/classes/com/ato/cordova/BuildConfig.class \
+/Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/ant-build/classes/com/ato/cordova/CordovaApp.class \
+/Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/ant-build/classes/com/ato/cordova/R$attr.class \
+/Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/ant-build/classes/com/ato/cordova/R$drawable.class \
+/Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/ant-build/classes/com/ato/cordova/R$string.class \
+/Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/ant-build/classes/com/ato/cordova/R$xml.class \
+/Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/ant-build/classes/com/ato/cordova/R.class \
+/Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/ant-build/classes/com/ionic/keyboard/IonicKeyboard$1.class \
+/Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/ant-build/classes/com/ionic/keyboard/IonicKeyboard$2.class \
+/Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/ant-build/classes/com/ionic/keyboard/IonicKeyboard$3.class \
+/Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/ant-build/classes/com/ionic/keyboard/IonicKeyboard.class \
+/Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/ant-build/classes/org/apache/cordova/device/Device.class \
+/Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/ant-build/dexedLibs/classes-767fd2b28abede37b74445f472ff40bc.jar \
+/Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/ant-build/dexedLibs/ibmdata-cordova-945a4027fed1adfaac1cce3c8ab209c1.jar \
+/Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/ant-build/dexedLibs/ibmbluemix-8a57a17cf5f94e2b35aa340dfb8e2eed.jar \
+/Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/ant-build/dexedLibs/ibmdata-b59af411088d6ea605e74612c9f75dba.jar \
+/Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/ant-build/dexedLibs/ibmfilesync-e79bdc57c401629fea8d19dd0e8248fa.jar \
+/Users/csantana23/Documents/SWG/git/bluemix/ato-demo/ato-cordova/platforms/android/ant-build/dexedLibs/ibmbluemix-cordova-1de27ded4e2a53771dc1be562588c007.jar \
