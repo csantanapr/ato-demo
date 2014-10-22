@@ -1,0 +1,13 @@
+applications:
+- services:
+  - todo-cs:MAS
+  - todo-cs:Push
+  - todo-cs:MobileData
+  disk_quota: 1024M
+  host: todo-cs
+  name: todo-cs
+  command: node app.js
+  path: .
+  domain: mybluemix.net
+  instances: 1
+  memory: 128M

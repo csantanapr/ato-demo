@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+  <head>
+    <title>ATO2014 Demo</title>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <title>Socket.IO chat</title>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font: 20px Helvetica, Arial; }
+      form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
+      form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
+      form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
+      #messages { list-style-type: none; margin: 0; padding-bottom: 30px; }
+      #messages li { padding: 20px 10px; font-size: 20px }
+      #messages li:nth-child(odd) { background: #eee; }
+      .arrow {
+        width: 0;
+        height: 0;
+        float: right;
+      }
+      .arrow-up {
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+      	border-bottom: 20px solid chocolate;
+      }
+      .arrow-down {
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+      	border-top: 20px solid chocolate;
+      }
+      .arrow-right {
+      	border-top: 20px solid transparent;
+      	border-bottom: 20px solid transparent;
+      	border-left: 20px solid chocolate;
+      }
+      .blue {
+        background: blue !important;
+      }
+      .red {
+        background: red !important;
+      }
+      .green {
+        background: green !important;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="messages"></ul>
+    <form action="">
+      <input id="m" autocomplete="off" /><button>Send</button>
+    </form>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script>
+      var magic = [];
+      function checkMagic(){
+        if (magic.length != 5) return false;
+        if (magic[0] === 'up' &&
+            magic[1] === 'up' &&
+            magic[2] === 'down' &&
+            magic[3] === 'down' &&
+            magic[4] === 'select') {
+              $('li').addClass(getDeviceColor());
+              return true;
+            } else {
+              $('li').removeClass(getDeviceColor());
+            }
+        return false;
+      }
+      function addToMagic(msg,arrow){
+        var pebble = false;
+        var key;
+        if (msg.match(/up$/)) {
+          arrow.addClass('arrow-up');
+          pebble = true;
+          key = 'up';
+        }
+        if (msg.match(/down$/)) {
+          arrow.addClass('arrow-down');
+          pebble = true;
+          key = 'down';
+        }
+        if (msg.match(/select$/)) {
+          arrow.addClass('arrow-right');
+          pebble = true;
+          key = 'select';
+        }
+        if(pebble){
+          if(magic.length == 5){
+            magic.shift();
+          }
+          magic.push(key);
+          arrow.addClass('arrow');
+        }
+      }
+      function getDeviceColor(){
+        var ua = navigator.userAgent.toLowerCase();
+        var isiPhone = ua.indexOf("iphone") > -1;
+        var isiPad = ua.indexOf("ipad") > -1;
+        var isiPod = ua.indexOf("ipod") > -1;
+        var isAndroid = ua.indexOf("android") > -1;
+        var color = 'green';
+        if(isiPhone || isiPad || isiPod){
+          color = 'blue';
+        } else if (isAndroid) {
+          color = 'red';
+        }
+        return color;
+      }
+      var socket = io();
+      $('form').submit(function(){
+        socket.emit('chat message', window.twitter_handle + ': ' + $('#m').val());
+        $('#m').val('');
+        return false;
+      });
+      socket.on('chat message', function(msg){
+        var li_msg = $('<li>');
+        var arrow = $('<div>');
+        addToMagic(msg, arrow);
+        li_msg.text(msg);
+        li_msg.append(arrow);
+        $('#messages').append(li_msg);
+        checkMagic();
+      });
+      window.twitter_handle = window.prompt('Your Twitter handle?');
+      if(twitter_handle) {
+        $.ajax('/follow?h='+twitter_handle).done(function(){
+          socket.emit('chat message', window.twitter_handle+' joined chat');
+        });
+      } else {
+         socket.emit('chat message', 'anonymous joined chat');
+         window.twitter_handle = 'anonymous';
+      }
+    </script>
+  </body>
+</html>

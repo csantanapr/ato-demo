@@ -1,0 +1,26 @@
+{
+	"name": "NodejsStarterApp",
+	"version": "0.0.1",
+	"description": "A sample nodejs app for Bluemix",
+	"engines": {
+		"node": "0.10.30"
+	},
+	"dependencies": {
+      "express": "4.*",
+      "body-parser": "*",
+      "ibmsecurity": "*",
+      "twilio": "*",
+      "ibmbluemix":"*",
+      "ibmdata":"*",
+      "socket.io": "*"
+   },
+  "scripts": {
+ 	    "start": "node app.js"
+  },
+  "license": "MIT",
+  "main": "app.js",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://hub.jazz.net/git/csantana/todo-cs"
+  }
+}
